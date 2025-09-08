@@ -6,7 +6,7 @@ from django.db.models import Model
 from django.template.loader import render_to_string
 
 import asset_definitions
-import pandas as pd
+import polars as pd
 import plotly.graph_objs as go
 
 from dashboards.meta import ClassWithMeta
