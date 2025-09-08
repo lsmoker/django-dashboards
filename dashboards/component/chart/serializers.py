@@ -113,7 +113,7 @@ class PlotlyChartSerializerMixin:
         request = kwargs.get("request")
         df = self.get_data(**kwargs)
 
-        if isinstance(df, pd.DataFrame) and df.empty:
+        if isinstance(df, pd.DataFrame) and df.is_empty():
             return self.empty_chart()
 
         fig = self.to_fig(df)
