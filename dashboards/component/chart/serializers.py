@@ -28,7 +28,7 @@ class ModelDataMixin:
         return self._meta.fields  # type: ignore
 
     def convert_to_df(self, data: Any, columns: Optional[List] = None) -> pd.DataFrame:
-        return pd.DataFrame(data, columns=columns)
+        return pd.DataFrame(data)
 
     def get_data(self, *args, **kwargs) -> pd.DataFrame:
         fields = self.get_fields()
